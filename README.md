@@ -27,6 +27,10 @@ So in this task requirements are next:
   And to pass environment variables to docker container use `-e` flag.
 - Don't forget to add `.dockerignore` file to your PR;
 - COMMAND=`docker pull supreme1991/weather`.
+To run the image, pass your Weather API key using an environment variable:
+```bash
+docker run --rm -e API_KEY="your_api_key" supreme1991/weather:latest
+```
 
 <details>
   <summary><strong>Hint</strong></summary>

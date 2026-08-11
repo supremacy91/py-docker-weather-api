@@ -27,11 +27,11 @@ def get_weather() -> dict:
 def main() -> None:
     weather = get_weather()
 
-    print(
-        f"{weather['location']['name']}: "
-        f"{weather['current']['temp_c']}°C, "
-        f"{weather['current']['condition']['text']}"
-    )
+    city = weather["location"]["name"]
+    temperature = weather["current"]["temp_c"]
+    condition = weather["current"]["condition"]["text"]
+
+    print(f"{city}: {temperature}°C, {condition}")
 
 
 if __name__ == "__main__":
